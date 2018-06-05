@@ -1,4 +1,4 @@
-package com.goosen.service1.controller;
+package com.goosen1.controller;
 
 
 /**
