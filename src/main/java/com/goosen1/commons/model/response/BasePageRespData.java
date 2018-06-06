@@ -9,6 +9,7 @@ import com.goosen1.commons.utils.BeanUtil;
 
 
 
+
 //import io.swagger.annotations.ApiModel;
 //import io.swagger.annotations.ApiModelProperty;
 //import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ import com.goosen1.commons.utils.BeanUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.CollectionUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

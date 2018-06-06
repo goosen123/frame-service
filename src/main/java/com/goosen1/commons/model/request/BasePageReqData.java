@@ -1,5 +1,7 @@
 package com.goosen1.commons.model.request;
 
+import java.io.Serializable;
+
 //import io.swagger.annotations.ApiModel;
 //import io.swagger.annotations.ApiModelProperty;
 //import lombok.AllArgsConstructor;
@@ -18,7 +20,9 @@ import org.hibernate.validator.constraints.Range;
 //@Data
 //@AllArgsConstructor
 //@NoArgsConstructor
-public class BasePageReqData<T> {
+public class BasePageReqData<T> implements Serializable{
+	
+	private static final long serialVersionUID = -4426958360243585882L;
 
 	/**
 	 * 按创建时间倒序排序

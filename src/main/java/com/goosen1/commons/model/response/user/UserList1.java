@@ -1,10 +1,14 @@
 package com.goosen1.commons.model.response.user;
 
+import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(value="用户列表实体")
-public class UserList1 {
+public class UserList1 implements Serializable{
+	
+	private static final long serialVersionUID = -7491215402569546437L;
 
 	@ApiModelProperty(value="用户昵称",example="郭靖")
 	private String nickname;

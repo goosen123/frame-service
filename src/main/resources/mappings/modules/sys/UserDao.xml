@@ -61,7 +61,7 @@
 	</update>
 	
 	<!-- 查询全部用户 -->
-	<select id="findAllUserList" resultType="UserList">
+	<select id="findAllUserList" resultType="UserList1">
 		SELECT
 			a.id,
 			a.nickname,

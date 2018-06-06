@@ -18,5 +18,5 @@ public interface UserDao extends CrudDao<User>{
 	public int updateLoginInfo(User user);
 	
 	public List<UserList1> findAllUserList();
-
+	
 }
