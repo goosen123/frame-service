@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.goosen1.commons.dao.UserDao">
+	
+	<select id="get" resultType="User">
+		SELECT 
+			* 
+		FROM user 
+		WHERE id = #{id}
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO user(
+			id, 
+			nickname, 
+			gender, 
+			avatar, 
+			type, 
+			status, 
+			wallet,
+			create_time,
+			update_time
+		) VALUES (
+			#{id}, 
+			#{nickname}, 
+			#{gender}, 
+			#{avatar}, 
+			#{type}, 
+			#{status}, 
+			#{wallet},
+			#{createTime},
+			#{updateTime}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE user SET 
+			nickname = #{nickname}, 
+			gender = #{gender}, 
+			avatar = #{avatar}, 
+			type = #{type}, 
+			status = #{status}, 
+			wallet = #{wallet},
+			update_time = #{updateTime}
+		WHERE id = #{id}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM user
+		WHERE id = #{id}
+	</delete>
+	
+	
+	
+	<!-- 更新登录信息，如登录IP、登录时间 -->
+	<update id="updateLoginInfo">
+		UPDATE user SET 
+			nickname = #{nickname}, 
+			gender = #{gender} 
+		WHERE id = #{id}
+	</update>
+	
+	<!-- 查询全部用户 -->
+	<select id="findAllUserList" resultType="UserList">
+		SELECT
+			a.id,
+			a.nickname,
+			a.gender
+		FROM user a
+	</select>
+	
+</mapper>
