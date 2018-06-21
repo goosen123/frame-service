@@ -18,6 +18,9 @@
     <bean id="userService" class="com.goosen1.service.impl.UserServiceImpl" /> 
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.goosen1.service.UserService" ref="userService"></dubbo:service>
+    
+    <bean id="dictService" class="com.goosen1.service.impl.DictServiceImpl" /> 
+    <dubbo:service interface="com.goosen1.service.DictService" ref="dictService"></dubbo:service>
 
 
 </beans>
