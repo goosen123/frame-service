@@ -1,7 +1,9 @@
 package com.goosen1.commons.model.po.dict;
 
+import java.io.Serializable;
 
-public class DictList {
+
+public class DictList implements Serializable {
 
 	private static final long serialVersionUID = -7491215402569546437L;
 	

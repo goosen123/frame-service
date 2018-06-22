@@ -46,14 +46,14 @@ public class DictServiceImpl implements DictService{
 	}
 	
 	@Override
-	public List<DictList> findAllDictList() {
-		return dictDao.findAllDictList();
+	public List<DictList> findAllDictList(String id,String pid,String name) {
+		return dictDao.findAllDictList(id,pid,name);
 	}
 
 	@Override
 	public BasePageRespData<DictList> findAllDictListByPage(BasePageReqData pageQO) {
 		Page<DictList> page = PageHelper.startPage(pageQO.getPageNum(), pageQO.getPageSize(), pageQO.getOrderBy());
-		this.findAllDictList();
+		this.findAllDictList(null,null,null);
         return BasePageRespData.build(page);
 	}
 

@@ -15,7 +15,7 @@ import com.goosen1.commons.model.response.BasePageRespData;
 public interface DictService extends BaseService,DictDao{
 
 	@Override
-	public List<DictList> findAllDictList();
+	public List<DictList> findAllDictList(String id,String pid,String name);
 	
 	public BasePageRespData<DictList> findAllDictListByPage(BasePageReqData pageQO);
 	

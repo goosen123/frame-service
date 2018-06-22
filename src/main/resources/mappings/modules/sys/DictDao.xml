@@ -59,6 +59,16 @@
 			create_time,
 			update_time
 		FROM sys_dict a
+		WHERE 1=1
+			<if test="id != null and id != ''">
+				AND a.id  = #{id}
+			</if>
+			<if test="pid != null and pid != ''">
+				AND a.pid  = #{pid}
+			</if>
+			<if test="name != null and name != ''">
+				AND a.name  = #{name}
+			</if>
 	</select>
 	
 </mapper>
